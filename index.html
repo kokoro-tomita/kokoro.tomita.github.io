@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="LkUgVMC5GTaQfRrzGktETDN_wN2gyGvGTthYIgp6_-A" />
+    <title>Kokoro Tomita | Researcher</title>
+    <style>
+        :root {
+            --bg-color: #FAFAF8;
+            --text-color: #333333;
+            --accent-color: #C17F74;
+            --secondary-color: #8DA399;
+            --line-color: #E0E0E0;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0.04em;
+        }
+
+        section p {
+            letter-spacing: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: "Garamond", "Times New Roman", "YuMincho", serif;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            border-bottom-color: transparent;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        header .subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border-bottom: none;
+            color: #888;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--line-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Research category grouping */
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-color);
+            border-left: 2px solid var(--accent-color);
+            padding-left: 0.75rem;
+            margin-bottom: 2rem;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .bio-text {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--line-color);
+        }
+
+        .project-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            display: inline-block;
+            border-bottom: none;
+        }
+
+        .project-title:hover {
+            color: var(--accent-color);
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 999px;
+            border: 1px solid var(--line-color);
+            margin-right: 0.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .tag.lit {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .tag.tech {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .tag.theory {
+            border-color: #a09080;
+            color: #a09080;
+        }
+
+        /* Preprint badge */
+        .preprint-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 999px;
+            background-color: var(--accent-color);
+            color: #fff;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        #cv {
+            border-top: 1px solid var(--line-color);
+            padding-top: 3rem;
+        }
+
+        .cv-item {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        .cv-year {
+            min-width: 140px;
+            font-size: 0.9rem;
+            color: #888;
+            padding-right: 1rem;
+        }
+
+        .cv-detail {
+            flex: 1;
+        }
+
+        .cv-role {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .cv-org {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .cv-desc {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            padding-top: 4rem;
+            border-top: 1px solid var(--line-color);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent-color);
+            padding: 4px;
+        }
+
+        .tagline {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .cv-item { flex-direction: column; }
+            .cv-year { margin-bottom: 0.2rem; }
+            .bio-text {
+                text-align: left;
+                letter-spacing: 0;
+                word-spacing: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <img src="profile.jpeg" alt="Portrait of Kokoro Tomita" class="profile-img">
+        <h1>Kokoro Tomita</h1>
+        <div class="subtitle"> Critical Philosophy of Technology</div>
+        <div class="tagline">Narrative assemblage, opacity, and care—across fiction, film, and AI.</div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <div class="section-title">About</div>
+        <p class="bio-text">
+            I am a researcher exploring onto-epistemology/phenomenology of agency, subjectivity, and matter. I work where narrative theory meets new materialism to theorize what I call "narrative assemblage": literary/technological forms that shift agency away from sovereign subjects and toward "dividual" subjects who arrange residues, voices, and material fragments.
+        </p>
+        <p class="bio-text">
+            My work spans modern and contemporary fiction and AI technical writing across East Asia and the Anglophone world, with adjacent interests in critical AI ethics, trauma narrative, and queer/disability studies—rethinking agency and resistance. Currently preparing for doctoral study beginning in Fall 2026.
+        </p>
+        <p class="bio-text">
+            I welcome inquiries about my research, potential collaborations, or speaking opportunities. Please feel free to reach out via email at <a href="mailto:r11122017@ntu.edu.tw">r11122017@ntu.edu.tw</a> (in English / Japanese / Chinese).
+        </p>
+    </section>
+
+    <section id="research">
+        <div class="section-title">Selected Research</div>
+
+        <!-- CATEGORY 1: AI & Philosophy -->
+        <div class="research-category">
+            <div class="category-label">AI &amp; Philosophy</div>
+
+            <!-- AI & Society paper -->
+            <div class="project-card">
+                <span class="tag tech">AI Ethics</span>
+                <span class="tag tech">Labor</span>
+                <span class="tag theory">Critical Theory</span>
+                <span class="tag theory">New Materialism</span>
+                <br>
+                <a href="https://link.springer.com/article/10.1007/s00146-026-02851-y" target="_blank" class="project-title">
+                    Compulsory Autonomy in AI: Unmasking Hidden Labor Through Queer Feminist Theory
+                </a>
+                <span class="project-meta">Published in <i>AI &amp; Society</i> (Peer-reviewed) | 2026</span>
+                <p>
+                    This article critiques the cultural metaphor of "autonomous AI" by foregrounding the human and more-than-human labor that makes AI systems appear self-sufficient. Drawing on queer feminist theories of compulsory sexuality and able-bodiedness, along with scholarship on ghost work and data labor, it develops the concept of "compulsory autonomy" to describe a regime that demands performances of independence while obscuring dependency, vulnerability, and ongoing exploitation.
+                </p>
+            </div>
+
+                 <!-- New paper -->
+            <div class="project-card">
+                <span class="tag tech">Social Ontology</span>
+                <span class="tag tech">Grounding Theory</span>
+                <span class="tag theory">AI Metaphysics</span>
+                <br>
+                <a href="https://philarchive.org/rec/TOMMAA-2" target="_blank" class="project-title">
+                    Mis-Grounding AI Agency: Heteronomous Assemblages and the Metaphysics of Maintenance
+                </a>
+    
+                <span class="project-meta">| Preprint | 2026</span>
+                <p>
+                    This paper argues that debates about AI agency rest on a systematic mis-grounding: our classificatory practices draw the grounding arrows from models to safety and agency facts when the correct arrows run from heteronomous assemblages — networks of models, human labour, infrastructures, and institutions — through model profiles to those facts. Drawing on grounding theory and social ontology, it develops three nested claims: the Grounding Thesis, the Mis-Grounding Thesis, and the Maintenance-Grounded Agency Thesis, defending the framework through pre-symptomatic cases and the Searlean account of status functions.
+                </p>
+            </div>
+        </div>
+
+        <!-- CATEGORY 2: Literary Fiction & Narrative Ethics -->
+        <div class="research-category">
+            <div class="category-label">Literary Fiction &amp; Narrative Ethics</div>
+
+            <!-- Cusk / MA thesis -->
+            <div class="project-card">
+                <span class="tag lit">Narrative Theory</span>
+                <span class="tag lit">Trauma &amp; Ethics</span>
+                <span class="tag theory">Critical Theory</span>
+                <span class="tag theory">New Materialism</span>
+                <br>
+                <a href="#" class="project-title">
+                    Strategic Opacity and Narrative Assemblage: Resisting Compulsory Articulation in Rachel Cusk's <i>Outline</i>
+                </a>
+                <span class="project-meta">MA Thesis | National Taiwan University | 2024–2025</span>
+                <p>
+                    My master's thesis reads Cusk's <i>Outline</i> as a study of "narrative assemblage," in which Faye's dividual narration curates other people's stories, places, and objects while maintaining strategic opacity. Combining Jane Bennett's vital materialism with narrative theory, the project argues that <i>Outline</i> resists contemporary therapeutic and neoliberal demands for confessional transparency and rethinks what counts as narrative agency.
+                </p>
+            </div>
+
+            <!-- Kokoro article -->
+            <div class="project-card">
+                <span class="tag lit">Modern Japanese Fiction</span>
+                <span class="tag lit">Narrative Ethics</span>
+                <br>
+                <a href="#" class="project-title">
+                    After the Letter: Narrative Agency and the Ethics of Re-Assembly in Natsume Sōseki's <i>Kokoro</i>
+                </a>
+                <span class="project-meta">Article manuscript | 2025</span>
+                <p>
+                    This article rereads <i>Kokoro</i> as an early scene of confessional crisis in Japanese modernity. Rather than treating Sensei's letter as a belatedly coherent self-explanation, it argues that the failure of emplotment exposes confession itself as a form of violence. The essay theorizes watashi's later handling of the letter, seasonal atmospheres, and architectural spaces as an ethics of re-assembly: living with another's residue without forcing closure.
+                </p>
+            </div>
+
+            <!-- NLMG article -->
+            <div class="project-card">
+                <span class="tag lit">Biopolitics</span>
+                <span class="tag lit">Narrative Ethics</span>
+                <span class="tag theory">Critical Theory</span>
+                <span class="tag theory">New Materialism</span>
+                <br>
+                <a href="#" class="project-title">
+                    Infrastructural Lives: Crip Opacity and Narrative Assemblage in Ishiguro's <i>Never Let Me Go</i>
+                </a>
+                <span class="project-meta">In progress | 2026</span>
+                <p>
+                    This article reads <i>Never Let Me Go</i> from the side of the organ-donation system it usually renders invisible. It argues that the clones' bodies are made hyper-transparent as organs while their attachments and memories remain illegible — as if they were part of the nonhuman infrastructure that keeps others alive. Bringing crip theory into conversation with Baradian apparatus, the essay theorizes Kathy's "I/we" as a dividual narrative assemblage that foregrounds infrastructural life and exposes crip opacity under compulsory able-bodiedness and infrastructuralization.
+                </p>
+            </div>
+        </div>
+
+        <!-- CATEGORY 3: Film & Visual Culture -->
+        <div class="research-category">
+            <div class="category-label">Film &amp; Visual Culture</div>
+
+            <!-- PoALOF article -->
+            <div class="project-card">
+                <span class="tag lit">Film &amp; Visuality</span>
+                <span class="tag theory">Queer Theory</span>
+                <span class="tag theory">New Materialism</span>
+                <br>
+                <a href="#" class="project-title">
+                    Beyond the Female Gaze: Intra-active Queer Optics in Sciamma's <i>Portrait of a Lady on Fire</i>
+                </a>
+                <span class="project-meta">Article manuscript | 2024</span>
+                <p>
+                    This essay reframes <i>Portrait of a Lady on Fire</i> not simply as a manifesto of the "female gaze" but as a study of how looking is materially arranged. Drawing on Karen Barad's agential realism, it argues that the film exposes the gaze as an apparatus that produces "painter" and "model" through intra-action rather than mediating between pre-existing subjects, and develops a queer optic in which bodies, canvases, light, and sound co-compose desire.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="cv">
+        <div class="section-title">Community Engagement &amp; Professional Experience</div>
+
+        <div class="cv-item">
+            <div class="cv-year">2022 – Present</div>
+            <div class="cv-detail">
+                <span class="cv-role">Multilingual Communications &amp; Wellness Support for LGBTQ+ Youth</span>
+                <span class="cv-org">Pride House Tokyo</span>
+                <div class="cv-desc">
+                    Designed and delivered ace/aro allyship training and multilingual support for visitors, while co-organizing regular online community spaces to help LGBTQ+ youth and children connect feeling safer.
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-year">2019 – 2022</div>
+            <div class="cv-detail">
+                <span class="cv-role">Student Staff &amp; Event Organizer</span>
+                <span class="cv-org">Waseda University Gender &amp; Sexuality Center</span>
+                <div class="cv-desc">
+                    Organized and facilitated multiple events around gender, sexuality, and student wellbeing; helped create safer spaces for marginalized students on campus.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">Contact</div>
+        <p style="text-align: center;">
+            <a href="mailto:r11122017@ntu.edu.tw">Email</a> &nbsp;/&nbsp;
+            <a href="https://philpeople.org/profiles/kokoro-tomita">PhilPeople</a> &nbsp;/&nbsp;
+            <a href="#">Medium</a>
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2026 Kokoro Tomita.
+    </footer>
+
+</div>
+
+</body>
+</html>
